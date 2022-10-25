@@ -1,0 +1,57 @@
+###findAll orcs
+GET http://localhost:8080/orcs
+Accept: application/json
+
+###create new orc#1 without horde
+POST http://localhost:8080/orcs
+Content-Type: application/json
+
+{
+  "firstName": "Нер'зул",
+  "lastName": "Смертоносный",
+  "speciality": "Некромант"
+}
+
+###create new orc#2 with horde
+POST http://localhost:8080/orcs/63584ec39763767b03f74b81
+Content-Type: application/json
+
+{
+  "firstName": "Варок",
+  "lastName": "Саурфанг",
+  "speciality": "Воин"
+}
+
+###findById orc
+GET http://localhost:8080/orcs/63584f3e9763767b03f74b83
+Accept: application/json
+
+###findByHordeId orc
+GET http://localhost:8080/orcs/hordes/63584ec39763767b03f74b81
+Accept: application/json
+
+
+###updateById orc without horde
+PUT http://localhost:8080/orcs/
+Content-Type: application/json
+
+{
+  "firstName": "Тралл",
+  "lastName": "Дуротанович",
+  "speciality": "Шаман"
+}
+
+
+###updateById orc with horde
+PUT http://localhost:8080/orcs/63584f3e9763767b03f74b83
+Content-Type: application/json
+
+{
+  "firstName": "Гул'дан",
+  "lastName": "Тёмный",
+  "speciality": "Чернокнижник"
+}
+
+###deleteById orc
+DELETE http://localhost:8080/orcs/63584f3e9763767b03f74b83
+Content-Type: application/json

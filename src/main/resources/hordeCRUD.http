@@ -1,0 +1,38 @@
+###findAll hordes
+GET http://localhost:8080/hordes
+Accept: application/json
+
+###create new horde#1
+POST http://localhost:8080/hordes
+Content-Type: application/json
+
+{
+  "name": "Золотая Орда",
+  "location": "Казахстан"
+}
+
+###create new horde#2
+POST http://localhost:8080/hordes
+Content-Type: application/json
+
+{
+  "name": "Великая Орда Тралла",
+  "location": "Оргриммар"
+}
+
+###findById horde
+GET http://localhost:8080/hordes/63584ec39763767b03f74b81
+Accept: application/json
+
+###updateById horde
+PUT http://localhost:8080/hordes/63584ec39763767b03f74b81
+Content-Type: application/json
+
+{
+  "name": "Железная Орда Громмаша",
+  "location": "Дренор"
+}
+
+###deleteById horde
+DELETE http://localhost:8080/hordes/63584ec39763767b03f74b81
+Content-Type: application/json
